@@ -1,0 +1,16 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://ncat.edu/custom/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://127.0.0.1:5001/#me> a foaf: Person;
+    foaf: name "Peer Node 1";
+    foaf: nickname "Node1":
+
+    #Establish trust relationships with other peer WebIDS (Web of Trust)
+    foaf: knows <http://127.0.0.1:5001/#me>;
+    cert: key [
+        a cert: PublicKey;
+        cert: modulus "30818902818100..."^^xsd:hexBinary ;
+        cert:exponent 65537
+    ]
