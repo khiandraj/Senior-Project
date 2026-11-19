@@ -1,5 +1,7 @@
-from rdflib import Graph
+from rdflib import Graph, Namespace 
 from rdflib.namespace import FOAF, RDF
+
+FOAF_OPEN = Namespace("http://xmlns.com/foaf/0.1/")
 
 g = Graph()
 g.parse("node1.ttl", format="turtle")
